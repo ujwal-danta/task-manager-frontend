@@ -2,12 +2,14 @@ import React from 'react'
 import { FaEdit } from "react-icons/fa";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from '../services/helper';
+
 
 const Card = ({ task, getAllTasks }) => {
     let navigate = useNavigate();
 
     const handleDelete = async () => {
-        await fetch('/api/tasks/' + task._id, {
+        await fetch(`${BASE_URL}/api/tasks/` + task._id, {
             method: 'DELETE',
         })
             .then(res => res.json())

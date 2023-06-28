@@ -28,8 +28,12 @@ const Edit = () => {
             },
         })
             .then((response) => response.json())
-            .then((data) => console.log(data))
-        navigate(`/`)
+            .then((data) => {
+            console.log(data)
+            navigate(`/`)
+            })
+            .catch((err) => console.log(err))
+            
 
     }
 
