@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea:focus, input:focus{
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+height: 100vh;
+width: 100vw;
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: rgb(252, 248, 248);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading{
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.input_container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 3rem;
+  width: 70%;
+  height: fit-content;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sub_container{
+  margin: 20px 0;
+  width: 80%;
+  display: flex;
+}
+
+.input{
+  flex: 7;
+  padding: 10px;
+  border: none;
+  background-color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.btn{
+  flex: 3;
+  letter-spacing: 5px;
+  border: none;
+  background-color: rgb(43, 43, 109);
   color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  background-color: rgb(68, 68, 170);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.success{
+  color: rgb(145, 236, 10);
+}
+
+.error{
+  color: red;
+}
+
+
+.card_container{
+  margin-top: 50px;
+  width: 65%;
+  overflow-y: auto;
+}
+
+.card{
+  border: none;
+  background-color: #fff;
+  padding: 0.7rem 2.5rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card_text{
+  font-weight: 400;
+  font-size: 20px;
+}
+.card_text.underline{
+  text-decoration: line-through;
+}
+
+.icons{
+  margin-left: auto;
+  padding: 0 5px;
+}
+
+.icon{
+  margin: 0 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon:hover{
+  color: rgba(0, 0, 0, 0.278);
+}
+
+.id_container{
+margin-top: 20px;  
+width: 80%;
+display: flex;
+align-items: center;
+padding: 2px 10px;
+}
+
+.id_text{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.left{
+  margin-left: auto;
+  font-size: 20px;
+  padding: 0 10px;
+  width: 50%;
+}
+
+.input_id{
+  min-width: 50%;
+  border: none;
+  font-size: 16px;
+  padding: 5px 15px;
+  background-color: whitesmoke;
+}
+
+.check{
+  margin-left: 40px;
+  width: 20px;
+  height: 15px;
+}
+
+.edit{
+  margin-top: 20px;
+  width: 80%;
+  padding: 5px 10px;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: rgb(43, 43, 109);
+  color: white;
+  cursor: pointer;
+}
+
+.edit:hover{
+  background-color: rgb(68, 68, 170);
+}
+
+.loading{
+  text-align: center;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.271);
 }
